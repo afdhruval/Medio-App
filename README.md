@@ -7,7 +7,12 @@ The application allows users to register, login, create posts, like posts, follo
 
 The project demonstrates a **modern full-stack architecture with a React frontend and a Node.js + Express backend connected to MongoDB.**
 
----
+## 📸 Project Preview
+
+<p align="center">
+  <img src="[https://via.placeholder.com/400x250](https://ik.imagekit.io/onf7ynga4s/Screenshot%202026-03-20%20103526.png)" alt="App Preview 1" width="400" height="250" />
+  <img src="https://ik.imagekit.io/onf7ynga4s/Screenshot%202026-03-20%20105348.png?updatedAt=1774027652672" alt="App Preview 2" width="400" height="250" />
+</p>
 
 # 🚀 Features
 
