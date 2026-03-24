@@ -29,7 +29,7 @@ app.use("/api/post", postRouter)
 app.use("/api/user", userRouter)
 
 // ✅ Catch-all (React routing fix)
-app.get("*", (req, res) => {
+app.get(/.*/, (req, res) => {
     res.sendFile(path.join(__dirname2, "dist", "index.html"))
 })
 
