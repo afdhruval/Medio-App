@@ -1,7 +1,9 @@
 const app = require("./src/app")
 const MONGODB = require("./src/config/database")
 
+const PORT = process.env.PORT || 3000;
+
 MONGODB()
-app.listen(3000, () => {
-    console.log("server is runnig on 3000");
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 })
