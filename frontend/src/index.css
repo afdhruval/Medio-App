@@ -8,6 +8,8 @@ body {
   color: #f0f0f0;
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
+  /* Fix overflow issues */
+  overflow-x: hidden;
 }
 
 input:-webkit-autofill,
@@ -41,11 +43,66 @@ input:-webkit-autofill:focus {
 }
 @media (max-width: 900px) {
   /* Dashboard grid collapses to single column */
-  [style*="gridTemplateColumns"] {
+  .dashboard-grid {
     grid-template-columns: 1fr !important;
   }
   /* hide left/right sticky sidebars on mobile */
-  [style*="position: sticky"] {
+  .sticky-sidebar {
     display: none !important;
   }
 }
+
+/* --- RESPONSIVE POST LAYOUT CLASSES --- */
+/* Base feed container - full width */
+.feed-container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto; /* Centers the feed when max-width kicks in */
+}
+
+/* Base post card styling */
+.post-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure images scale properly */
+.post-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .dashboard-grid {
+    padding: 16px 0 !important; /* Minimal padding, 0 horizontal for edge-to-edge posts */
+  }
+  .feed-container {
+    padding: 0 !important;
+  }
+  .post-card {
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .feed-container {
+    max-width: 650px !important; /* Entire feed centered horizontally */
+  }
+}
+
+/* Desktop (1025px+) */
+@media (min-width: 1025px) {
+  .feed-container {
+    max-width: 750px !important; /* Keep same centered layout, slightly increase max-width */
+  }
+}
+/* --- END RESPONSIVE POST LAYOUT CLASSES --- */

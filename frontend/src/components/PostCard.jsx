@@ -69,7 +69,7 @@ export default function PostCard({ post, onRefresh }) {
 
   return (
     <article
-      className="fade-up"
+      className="fade-up post-card"
       style={{
         background: "#0d0d0d",
         border: "1px solid #1a1a1a",
@@ -122,10 +122,11 @@ export default function PostCard({ post, onRefresh }) {
       >
         {post.imgUrl ? (
           <img
+            className="post-card-img"
             src={post.imgUrl}
             alt="post"
             draggable={false}
-            style={{ width: "100%", display: "block", objectFit: "cover", maxHeight: 500 }}
+            style={{ maxHeight: 500 }}
           />
         ) : (
           <div style={{

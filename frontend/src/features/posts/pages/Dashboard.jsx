@@ -34,7 +34,7 @@ export default function Dashboard() {
       <Navbar />
 
       {/* ── 3-column grid (matches wireframe exactly) ── */}
-      <div style={{
+      <div className="dashboard-grid" style={{
         maxWidth: 1260,
         margin: "0 auto",
         display: "grid",
@@ -45,12 +45,12 @@ export default function Dashboard() {
       }}>
 
         {/* ── LEFT: all users + follow ── */}
-        <div style={{ position: "sticky", top: 78 }}>
+        <div className="sticky-sidebar" style={{ position: "sticky", top: 78 }}>
           <LeftSidebar />
         </div>
 
         {/* ── CENTER: feed ── */}
-        <main>
+        <main className="feed-container">
           {/* Welcome bar */}
           {user && (
             <Panel style={{ marginBottom: 14, display: "flex", alignItems: "center", gap: 12 }}>
@@ -102,7 +102,7 @@ export default function Dashboard() {
         </main>
 
         {/* ── RIGHT: comments ── */}
-        <div style={{ position: "sticky", top: 78 }}>
+        <div className="sticky-sidebar" style={{ position: "sticky", top: 78 }}>
           <RightSidebar posts={posts} />
         </div>
 
